@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.postboxservices/postbox-tools",
+  "description": "Free email checks: 24 blacklists, spoofing/BEC grade, redirect tracing, email spam test, WHOIS.",
+  "websiteUrl": "https://postboxservices.com/mcp/",
+  "version": "0.1.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.postboxservices.com/mcp"
+    }
+  ]
+}
