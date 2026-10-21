@@ -1,5 +1,7 @@
 # Postbox Services - Email Deliverability & Security Tools (MCP server)
 
+[![Postbox Services MCP connector](https://glama.ai/mcp/connectors/com.postboxservices/postbox-tools/badges/score.svg)](https://glama.ai/mcp/connectors/com.postboxservices/postbox-tools)
+
 A free, open-access [MCP](https://modelcontextprotocol.io/) server that lets AI assistants run **real email deliverability and security checks** - live DNS, real blacklist queries, actual SMTP analysis - instead of guessing from training data.
 
 **Server URL:**
@@ -11,6 +13,8 @@ https://mcp.postboxservices.com/mcp
 - Transport: Streamable HTTP - Authentication: none (open access, fair-use limits)
 - Official registry: [`com.postboxservices/postbox-tools`](https://registry.modelcontextprotocol.io/v0/servers?search=postbox)
 - Setup guides with screenshots (claude.ai, Claude Desktop, Claude Code, ChatGPT, Grok, Cursor): **https://postboxservices.com/mcp/**
+- MCP Server Card: https://mcp.postboxservices.com/.well-known/mcp.json
+- See it in action: [8 real examples from ChatGPT, Claude and Grok, with screenshots](https://postboxservices.com/blogs/post/email-deliverability-checks-from-your-ai/)
 
 ## The 8 tools
 
@@ -32,6 +36,8 @@ https://mcp.postboxservices.com/mcp
 - "Where does this shortened link actually go: https://bit.ly/xyz"
 - "Run a spam test for my newsletter setup"
 
+Each of these, and four more, is walked through with a screenshot in [8 real examples](https://postboxservices.com/blogs/post/email-deliverability-checks-from-your-ai/): blacklist check, spoofing grade, redirect trace, full spam test, bounce diagnosis, domain age and WHOIS.
+
 ## Quick install
 
 **Claude Code**
@@ -48,7 +54,7 @@ claude mcp add --transport http postbox-tools https://mcp.postboxservices.com/mc
 { "mcpServers": { "postbox-tools": { "url": "https://mcp.postboxservices.com/mcp" } } }
 ```
 
-**ChatGPT (web):** Plugins -> Add -> Add MCP server -> type **Streamable HTTP** -> paste the URL, authentication: none.
+**ChatGPT (web):** Plugins -> Add MCP server -> **Create MCP App** -> paste the URL, set Authentication to **No authentication** (it defaults to OAuth). Name it `postbox_tools` in your prompt for reliable invocation.
 
 **Grok:** Settings -> Connectors -> Custom Connector -> paste the URL.
 
